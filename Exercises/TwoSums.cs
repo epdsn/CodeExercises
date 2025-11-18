@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Http.Headers;
 
 namespace Exercises
@@ -32,21 +33,18 @@ namespace Exercises
 
         public int[] FindTwoSumForEach(int[] nums, int target)
         {
+            Dictionary<int,int> map = new Dictionary<int,int>();
 
-            foreach (var num1 in nums)
+            for(int i = 0; i < nums.Length; i++)
             {
-                foreach (var num2 in nums)
+                int num = target - nums[i];
+                if (map.TryGetValue(num, out int index))
                 {
-                    // Chcek if num1 + num2 equals target
-                   // if (num1 + num1 == target && Array.IndexOf[num1] != Array.IndexOf[num2] )
-                    // Check if num1 and num2 are not the same element
-                    // If both conditions are met, return their indices
+                    return new int[] { i, index };
                 }
-
+                else map[nums[i]] = i;
             }
-
-            // Your code goes here
-            throw new NotImplementedException();
+            return new int[2];
         }
 
         public int[] FindTwoSumFor(int[] nums, int target)
