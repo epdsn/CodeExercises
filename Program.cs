@@ -14,7 +14,7 @@ namespace CodeExcerciseDataImportOutput
             Console.WriteLine("--------------------------------");
             Console.WriteLine("Welcome to Code Exercises");
             Console.WriteLine("--------------------------------");
-            Console.WriteLine("A simeple console app where we practice in order to keep our skills sharp.\n");
+            Console.WriteLine("A simple console app where we practice in order to keep our skills sharp.\n");
 
 
             Console.WriteLine("ready to get stated? (y/n)");
