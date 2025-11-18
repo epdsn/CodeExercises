@@ -1,4 +1,5 @@
 using System;
+using System.Net.Http.Headers;
 
 namespace Exercises
 {
@@ -37,6 +38,7 @@ namespace Exercises
                 foreach (var num2 in nums)
                 {
                     // Chcek if num1 + num2 equals target
+                   // if (num1 + num1 == target && Array.IndexOf[num1] != Array.IndexOf[num2] )
                     // Check if num1 and num2 are not the same element
                     // If both conditions are met, return their indices
                 }
@@ -54,14 +56,15 @@ namespace Exercises
             {
                 for (int j = 0; j < nums.Length; j++)
                 {
-                    // Chcek if num1 + num2 equals target
-                    // Check if num1 and num2 are not the same element
-                    // If both conditions are met, return their indices
+                    if (nums[i] + nums[j] == target)
+                    {
+                       return new int[] {i,j};
+                    }
                 }
 
             }
 
-            throw new NotImplementedException();
+            return new int[0];
         }
     }
 
