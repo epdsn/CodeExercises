@@ -29,9 +29,38 @@ namespace Exercises
             
         }
 
-        public int[] FindTwoSum(int[] nums, int target)
+        public int[] FindTwoSumForEach(int[] nums, int target)
+        {
+
+            foreach (var num1 in nums)
+            {
+                foreach (var num2 in nums)
+                {
+                    // Chcek if num1 + num2 equals target
+                    // Check if num1 and num2 are not the same element
+                    // If both conditions are met, return their indices
+                }
+
+            }
+
+            // Your code goes here
+            throw new NotImplementedException();
+        }
+
+        public int[] FindTwoSumFor(int[] nums, int target)
         {
             // Your code goes here
+            for(int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 0; j < nums.Length; j++)
+                {
+                    // Chcek if num1 + num2 equals target
+                    // Check if num1 and num2 are not the same element
+                    // If both conditions are met, return their indices
+                }
+
+            }
+
             throw new NotImplementedException();
         }
     }
