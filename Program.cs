@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text;
+using Exercises;
 
 namespace CodeExcerciseDataImportOutput
 {
@@ -9,16 +10,50 @@ namespace CodeExcerciseDataImportOutput
     {
         private static void Main(string[] args)
         {
-            
+
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Welcome to Code Exercises");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("A simeple console app where we practice in order to keep our skills sharp.\n");
+
+
+            Console.WriteLine("ready to get stated? (y/n)");
+            var input = Console.ReadLine();
+
+            if (input?.ToLower() != "y")
+            {
+                Console.WriteLine("Goodbye!");
+                return;
+            } else
+            {
+                Console.WriteLine("Great! Let's get started!\n");
+                var twoSums = new TwoSums();
+
+                try{
+                    var result = twoSums.FindTwoSum(new int[] { 2, 7, 11, 15 }, 9);
+                    Console.WriteLine($"Indices found: [{result[0]}, {result[1]}]");
+                } 
+                catch (NotImplementedException)
+                {
+                    Console.WriteLine("FindTwoSum method is not yet implemented.");
+                }
+
+            }
+
+
+            //Console.WriteLine("This exercise will read a file and output two files based on field count.");
+            //FileConverter();
+        }
+
+        public static void FileConverter()
+        {
             string fileLocation;
             int numberOfFields;
             string[] fileData = null;
             string delimiter;
             ConsoleKeyInfo cki;
 
-            Console.WriteLine("--------------------------------");
-            Console.WriteLine(" CSV and TSV data exporter");
-            Console.WriteLine("--------------------------------");
+
 
             int count = 0;
             do
@@ -48,7 +83,6 @@ namespace CodeExcerciseDataImportOutput
             {
                 cki = Console.ReadKey();
             } while (cki.Key != ConsoleKey.Q);
-
         }
 
         public static string[] readData(string filepath)
