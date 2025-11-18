@@ -30,8 +30,12 @@ namespace CodeExcerciseDataImportOutput
                 var twoSums = new TwoSums();
 
                 try{
-                    var result = twoSums.FindTwoSum(new int[] { 2, 7, 11, 15 }, 9);
+                    var result = twoSums.FindTwoSumForEach(new int[] { 2, 7, 11, 15 }, 9);
                     Console.WriteLine($"Indices found: [{result[0]}, {result[1]}]");
+
+                    var result3 = twoSums.FindTwoSumFor(new int[] {2,5,3,6}, 8);
+                    Console.WriteLine($"Found: [{result[0]}, {result[1]}]");
+
                 } 
                 catch (NotImplementedException)
                 {
