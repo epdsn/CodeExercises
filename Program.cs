@@ -26,7 +26,43 @@ namespace CodeExcerciseDataImportOutput
                 return;
             } else
             {
-                Console.WriteLine("Great! Let's get started!\n");
+
+                Console.WriteLine("What exercise do you want to run?");
+                Console.WriteLine("1. Two Sums");
+                Console.WriteLine("2. File Converter");
+                Console.WriteLine("3. Exit");
+                Console.WriteLine("Enter the number of the exercise you want to run:");
+                var exercise = Console.ReadLine();
+
+
+                switch (exercise)
+                {
+                    case "1":
+                        var twoSums = new TwoSums();
+                        break;
+                    case "2":
+                        Console.WriteLine("Cmong soon! File Converter!\n");
+                        break;
+                    case "3":
+                        Console.WriteLine("Goodbye! See you next time!\n");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid exercise number. Please try again.");
+                        break;
+                }
+
+
+            }
+
+            //Console.WriteLine("This exercise will read a file and output two files based on field count.");
+            //FileConverter();
+        }
+
+
+        public static void TwoSums()
+        {
+            
+                Console.WriteLine("Great! Let's get started with Two Sums!\n");
                 var twoSums = new TwoSums();
 
                 try{
@@ -41,12 +77,6 @@ namespace CodeExcerciseDataImportOutput
                 {
                     Console.WriteLine("FindTwoSum method is not yet implemented.");
                 }
-
-            }
-
-
-            //Console.WriteLine("This exercise will read a file and output two files based on field count.");
-            //FileConverter();
         }
 
         public static void FileConverter()
