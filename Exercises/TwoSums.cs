@@ -14,8 +14,13 @@ namespace Exercises
             Console.WriteLine("You can return the answer in any order.\n");
 
             Console.WriteLine("Example 1:");
-            Console.WriteLine("Input: nums = [2,7,11,15], target = 9");
-            Console.WriteLine("Output: [0,1]");
+            var nums1 = new int[] { 2, 7, 11, 15 };
+            var target1 = 9;
+            var result1 = FindTwoSumForEach(new int[] { 2, 7, 11, 15 }, 9);
+
+            Console.WriteLine($"Input: nums = [{string.Join(", ", nums1)}], target = {target1}");
+            Console.WriteLine($"Output: [{result1[0]}, {result1[1]}]");
+
 
             Console.WriteLine("Example 2:");
             Console.WriteLine("Input: nums = [3,2,4], target = 6");
@@ -28,7 +33,9 @@ namespace Exercises
             Console.WriteLine("Let's solve it!");
             Console.WriteLine("--------------------------------\n");
             Console.WriteLine("When you are ready, fill in the FindTwoSum method in Excercises/twosums.cs\n");
-            
+
+            Console.ReadLine();
+
         }
 
         public int[] FindTwoSumForEach(int[] nums, int target)
