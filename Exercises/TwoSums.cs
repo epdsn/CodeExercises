@@ -19,20 +19,28 @@ namespace Exercises
             var result1 = FindTwoSumForEach(new int[] { 2, 7, 11, 15 }, 9);
 
             Console.WriteLine($"Input: nums = [{string.Join(", ", nums1)}], target = {target1}");
-            Console.WriteLine($"Output: [{result1[0]}, {result1[1]}]");
+            Console.WriteLine($"Output: [{result1[0]}, {result1[1]}] \n");
 
 
             Console.WriteLine("Example 2:");
-            Console.WriteLine("Input: nums = [3,2,4], target = 6");
-            Console.WriteLine("Output: [1,2]"); 
+            var nums2 = new int[] { 3, 2, 4 };
+            var target2 = 6;
+            var result2 = FindTwoSumForEach(nums2, target2);
 
-            Console.WriteLine("Example 3:");
-            Console.WriteLine("Input: nums = [3,3], target = 6");
-            Console.WriteLine("Output: [0,1]\n");
+            Console.WriteLine($"Input nums2 = [{string.Join(", ", nums2)}], target = {target2}");
+            Console.WriteLine($"Output: [{result2[0]}, {result2[1]}] \n");
 
-            Console.WriteLine("Let's solve it!");
-            Console.WriteLine("--------------------------------\n");
-            Console.WriteLine("When you are ready, fill in the FindTwoSum method in Excercises/twosums.cs\n");
+
+            //Console.WriteLine("Example 3:");
+            //Console.WriteLine("Input: nums = [3,3], target = 6");
+            //Console.WriteLine("Output: [0,1]\n");
+
+            //Console.WriteLine("Let's solve it!");
+            //Console.WriteLine("--------------------------------\n");
+            //Console.WriteLine("When you are ready, fill in the FindTwoSum method in Excercises/twosums.cs\n");
+            
+
+
 
             Console.ReadLine();
 
