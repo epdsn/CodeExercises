@@ -30,27 +30,33 @@ namespace CodeExcerciseDataImportOutput
             {
 
                 Console.WriteLine("What exercise do you want to run?");
+                Console.WriteLine("0. Exit");
                 Console.WriteLine("1. Two Sums");
-                Console.WriteLine("2. File Converter");
-                Console.WriteLine("3. Async Examples");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("2. Async Examples");
+                Console.WriteLine("3. Binary tree comparer (coming soon!)");
+                Console.WriteLine("4. Binary Search (coming soon!)");
+                Console.WriteLine("5. Web sockets (coming soon!)");
+                Console.WriteLine("6. LINQ (coming soon!)");
                 Console.WriteLine("Enter the number of the exercise you want to run:");
                 var exercise = Console.ReadLine();
 
 
                 switch (exercise)
                 {
+                    case "0":
+                        Console.WriteLine("Goodbye! See you next time!\n");
+                        break;
                     case "1":
                         var twoSums = new TwoSums();
                         break;
                     case "2":
-                        Console.WriteLine("Cmong soon! File Converter!\n");
-                        break;
-                    case "3":
                         await new AsyncExamples().RunConcurrentExampleAsync(CancellationToken.None);
                         break;
+                    case "3":
                     case "4":
-                        Console.WriteLine("Goodbye! See you next time!\n");
+                    case "5":
+                    case "6":
+                        Console.WriteLine("Coming soon!\n");
                         break;
                     default:
                         Console.WriteLine("Invalid exercise number. Please try again.");
