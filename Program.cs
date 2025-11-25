@@ -2,13 +2,15 @@
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using Exercises;
 
 namespace CodeExcerciseDataImportOutput
 {
     class Program
     {
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
 
             Console.WriteLine("--------------------------------");
@@ -30,7 +32,8 @@ namespace CodeExcerciseDataImportOutput
                 Console.WriteLine("What exercise do you want to run?");
                 Console.WriteLine("1. Two Sums");
                 Console.WriteLine("2. File Converter");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Async Examples");
+                Console.WriteLine("4. Exit");
                 Console.WriteLine("Enter the number of the exercise you want to run:");
                 var exercise = Console.ReadLine();
 
@@ -44,6 +47,9 @@ namespace CodeExcerciseDataImportOutput
                         Console.WriteLine("Cmong soon! File Converter!\n");
                         break;
                     case "3":
+                        await new AsyncExamples().RunConcurrentExampleAsync(CancellationToken.None);
+                        break;
+                    case "4":
                         Console.WriteLine("Goodbye! See you next time!\n");
                         break;
                     default:
