@@ -30,17 +30,13 @@ namespace Exercises
             Console.WriteLine($"Input nums2 = [{string.Join(", ", nums2)}], target = {target2}");
             Console.WriteLine($"Output: [{result2[0]}, {result2[1]}] \n");
 
+            Console.WriteLine("Example 3:");
+            var nums3 = new int[] { 3, 3 };
+            var target3 = 6;
+            var result3 =  string.Join( ", ", FindTwoSumForEach(nums3, target3));
 
-            //Console.WriteLine("Example 3:");
-            //Console.WriteLine("Input: nums = [3,3], target = 6");
-            //Console.WriteLine("Output: [0,1]\n");
-
-            //Console.WriteLine("Let's solve it!");
-            //Console.WriteLine("--------------------------------\n");
-            //Console.WriteLine("When you are ready, fill in the FindTwoSum method in Excercises/twosums.cs\n");
-            
-
-
+            Console.WriteLine($"Input nums 3= [{string.Join(", ", nums3)}], target = {target3}");
+            Console.WriteLine($"Output: [{result3}] \n");
 
             Console.ReadLine();
 
