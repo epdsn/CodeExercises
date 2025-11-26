@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,6 +30,10 @@ namespace CodeExcerciseDataImportOutput
             } else
             {
 
+                int mainChoice = mainMenuChoices();
+
+
+
                 Console.WriteLine("What exercise do you want to run?");
                 Console.WriteLine("0. Exit");
                 Console.WriteLine("1. Two Sums");
@@ -39,8 +44,6 @@ namespace CodeExcerciseDataImportOutput
                 Console.WriteLine("6. LINQ (coming soon!)");
                 Console.WriteLine("Enter the number of the exercise you want to run:");
                 var exercise = Console.ReadLine();
-
-
                 switch (exercise)
                 {
                     case "0":
@@ -68,6 +71,35 @@ namespace CodeExcerciseDataImportOutput
 
             //Console.WriteLine("This exercise will read a file and output two files based on field count.");
             //FileConverter();
+        }
+
+        private static int mainMenuChoices()
+        {
+            while (true)
+            { 
+                Console.WriteLine("What topic would you like to try?");
+                Console.WriteLine("0. Back");
+                Console.WriteLine("1. Arrays & String Manipulation (25 problems)");
+                Console.WriteLine("2. Linked Lists (10 problems)");
+                Console.WriteLine("3. Stacks & Queues (10 problems)");
+                Console.WriteLine("4. Trees & Graphs (15 problems)");
+                Console.WriteLine("5. Hash Tables & Sets (8 problems)");
+                Console.WriteLine("6. Sorting & Searching (8 problems)");
+                Console.WriteLine("7. Dynamic Programming (10 problems)");
+                Console.WriteLine("8. Async/Await & Tasks (8 problems)");
+                Console.WriteLine("9. Advanced Algorithms (6 problems)");
+                Console.WriteLine("10. How to Use This List");
+                Console.WriteLine("Enter the number of the exercise you want to run:");
+                
+                var input = Console.ReadLine();
+
+                if (int.TryParse(input, out int topic) && topic >= 0 && topic <= 10)
+                {
+                    return topic;
+                }
+            
+                Console.WriteLine("Invalid topic, Please Choose a topic 1-10, or 0 to go back.");
+            }
         }
 
 
